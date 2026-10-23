@@ -1,0 +1,178 @@
+:root {
+  --bg: #0a060b;
+  --surface: #2a1018;
+  --ink: #eceaee;
+  --muted: #b8b4be;
+  --accent: #8b1538;
+  --accent-dark: #c8c5ce;
+  --border: #8d8894;
+  --shadow: 0 12px 30px rgba(4, 1, 6, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(91, 24, 70, 0.42), transparent 30%),
+    radial-gradient(circle at 82% 10%, rgba(139, 21, 56, 0.28), transparent 34%),
+    radial-gradient(circle at 18% 78%, rgba(20, 42, 28, 0.38), transparent 36%),
+    linear-gradient(180deg, #140910 0%, var(--bg) 100%);
+  line-height: 1.6;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(760px, calc(100% - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  padding: 4.5rem 0 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  color: #f3f1f5;
+}
+
+.tagline {
+  margin: 0;
+  max-width: 42ch;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+main {
+  display: grid;
+  gap: 1.25rem;
+  padding-bottom: 3rem;
+}
+
+section {
+  background:
+    linear-gradient(165deg, rgba(61, 22, 54, 0.55), transparent 42%),
+    var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem 1.6rem 1.4rem;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  color: #d8c4cc;
+}
+
+p {
+  margin: 0 0 0.85rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.skills-list,
+.projects-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skills-list li {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #142018 0 8px,
+      #0a0c0a 8px 12px
+    );
+  color: var(--accent-dark);
+  border: 1px solid #9a969f;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+}
+
+.projects-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.projects-list li {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, rgba(139, 21, 56, 0.18), transparent 55%),
+    #160910;
+}
+
+.projects-list a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: #c9c6d0;
+  text-decoration: none;
+  display: inline-block;
+  transform-origin: left center;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.projects-list a:hover,
+.projects-list a:focus-visible {
+  color: #eceaf0;
+}
+
+.projects-list p {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 0 0 3rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(1.02);
+}
+
+.dark-mode {
+   background-color: #222;
+   color: white;
+}
